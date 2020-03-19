@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device width, initial scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>UTS</title>
+
+        <style>
+            .sidebar {
+                height: 105%;
+                width: 15%;
+                left: -15%;
+                top: -16px;
+                background-color: #44749d;
+                position: fixed;
+                transition-duration: 1000ms;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .button {
+                top: 0px;
+                margin-left: 2px;
+                transition-duration: 1000ms;
+            }
+
+            .main {
+                height: 100%;
+                flex: 80%;
+                top: 0px;
+                margin-left: 5px;
+                transition-duration: 1000ms;
+            }
+
+            .rightbar {
+                height: 100%;
+                flex: 15%;
+                top: 0px;
+                margin-left: -100px;
+                transition-duration: 1000ms;
+            }
+
+            .sidebar1 {
+                height: 105%;
+                width: 15%;
+                left: 0px;
+                top: -16px;
+                background-color: #44749d;
+                position: fixed;
+                transition-duration: 1000ms;
+            }
+
+            .button1 {
+                top: 0px;
+                margin-left: 15%;
+                transition-duration: 1000ms;
+            }
+
+            .main1 {
+                height: 100%;
+                flex: 53%;
+                top: 0px;
+                margin-left: 5px;
+                transition-duration: 1000ms;
+            }
+
+            .kotak1 {
+                height: 150px;
+                width: 20%;
+                margin: 10px;
+                float: left;
+                background-color: #c6d4e1;
+            }
+
+            .kotak1:hover {
+                background-color: #1976d2;
+            }
+
+            .kotak2 {
+                height: 300px;
+                width: 85%;
+                margin: 10px;
+                float: left;
+                background-color: #c6d4e1;
+            }
+
+            .kotak3 {
+                height: 130px;
+                width: 85%;
+                margin: 10px;
+                float: left;
+                background-color: #c6d4e1;
+            }
+
+            .kotak4 {
+                height: 350px;
+                width: 80%;
+                margin: 10px;
+                float: left;
+                background-color: #ebe7e0;
+            }
+
+            .kotak5 {
+                height: 250px;
+                width: 80%;
+                margin: 10px;
+                float: left;
+                background-color: #ebe7e0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="sidebar" id="sidebar">
+            <span style="font-size: 30px; cursor: pointer; float: right; margin-top: 7px;" onclick="closeNav()">&#x2715;</span>
+            <ul style="height: 5%; background-color: #c6d4e1;">
+
+            </ul>
+        </div>
+        <div class="container">
+            <span class="button" id="button" style="font-size: 30px; cursor: pointer;" onclick="openNav()">&#9776;</span>
+            <div class="main" id="main">
+                <div class="kotak1"></div>
+                <div class="kotak1"></div>
+                <div class="kotak1"></div>
+                <div class="kotak1"></div>
+                <div class="kotak2"></div>
+                <div class="kotak3"></div>
+            </div>
+            <div class="rightbar">
+                <div class="kotak4"></div>
+                <div class="kotak5"></div>
+            </div>
+        </div>
+
+        <script>
+            function openNav() {
+                document.getElementById('sidebar').className="sidebar1";
+                document.getElementById('button').className="button1";
+                document.getElementById('main').className="main1";
+            }
+
+            function closeNav() {
+                document.getElementById('sidebar').className="sidebar";
+                document.getElementById('button').className="button";
+                document.getElementById('main').className="main";
+            }
+        </script>
+    </body>
+</html>
